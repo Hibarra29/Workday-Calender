@@ -1,4 +1,4 @@
-const currentDate = dayjs().format('dddd') + " " + dayjs().format("Do MMM YYYY");
+const currentDate = dayjs().format('dddd') + ", " + dayjs().format("MMM DD") + 'th';
 const currentHour = dayjs().format('HH:mm');
 
 // hour in text var 
@@ -25,9 +25,9 @@ $(function () {
   
   // listener for click events on the save button. 
    $(".saveBtn").on("click", function(){
-    userInput = $(this).siblings(".form-control").val().trim();
+    userInput = $(this).siblings("textarea").val().trim();
     console.log(userInput);
-    hourSpan = $(this).siblings(".input-group-prepend").text().trim();
+    hourSpan = document.querySelector("text-hour");
     console.log(hourSpan);
     localStorage.setItem(hourSpan, JSON.stringify(userInput));
   });
@@ -35,7 +35,7 @@ $(function () {
   // TODO: Add code to apply the past, present, or future class to each time block
     function background () {
  
-  $("textarea").each(function () {
+  $("textarea").each(function() {
     var timeTest = parseInt($(this).attr("id"));
     hour = parseInt(hour);
     console.log(timeTest);
@@ -59,7 +59,7 @@ $(function () {
     $('#currentDay').html(timeNow.format('YYYY MMMM DD') + ''
                           + timeNow.format('dddd')
                           .substring(0,3).toUpperCase());
-   $('#currentDay').html(currentDate + " " + timeNow.format('HH:mm:ss A'))
+   $('#currentDay').html(currentDate + " ")
   }, 100);
 
   $(document).ready(function(){
@@ -72,32 +72,32 @@ $(function () {
 
 
     console.log("Current Hour " + hour);
-    var init9 = JSON.parse(localStorage.getItem("#hour-9"));
+    var init9 = JSON.parse(localStorage.getItem("#9am"));
     nineAm.val(init9);
   
   
-    var init10 = JSON.parse(localStorage.getItem("#hour-10"))
+    var init10 = JSON.parse(localStorage.getItem("#10am"))
     tenAm.val(init10);
    
-    var init11 = JSON.parse(localStorage.getItem("#hour-11"))
+    var init11 = JSON.parse(localStorage.getItem("#11am"))
     elevenAm.val(init11);
    
-    var init12 = JSON.parse(localStorage.getItem("#hour-12"))
+    var init12 = JSON.parse(localStorage.getItem("#12pm"))
     twelvePm.val(init12);
    
-    var init1 = JSON.parse(localStorage.getItem("#hour-1"))
+    var init1 = JSON.parse(localStorage.getItem("#1pm"))
     onePm.val(init1);
    
-    var init2 = JSON.parse(localStorage.getItem("#hour-2"))
+    var init2 = JSON.parse(localStorage.getItem("#2pm"))
     twoPm.val(init2);
    
-    var init3 = JSON.parse(localStorage.getItem("#hour-3"))
+    var init3 = JSON.parse(localStorage.getItem("#3pm"))
     threePm.val(init3);
    
-    var init4 = JSON.parse(localStorage.getItem("#hour-4"))
+    var init4 = JSON.parse(localStorage.getItem("#4pm"))
     fourPm.val(init4);
    
-    var init5 = JSON.parse(localStorage.getItem("#hour-5"))
+    var init5 = JSON.parse(localStorage.getItem("#5pm"))
     fivePm.val(init5);
   }
   
