@@ -27,7 +27,7 @@ $(function () {
    $(".saveBtn").on("click", function(){
     userInput = $(this).siblings("textarea").val().trim();
     console.log(userInput);
-    hourSpan = document.querySelector("text-hour");
+    hourSpan = $(this).siblings("").text().trim();
     console.log(hourSpan);
     localStorage.setItem(hourSpan, JSON.stringify(userInput));
   });
@@ -72,32 +72,32 @@ $(function () {
 
 
     console.log("Current Hour " + hour);
-    var init9 = JSON.parse(localStorage.getItem("#9am"));
+    var init9 = JSON.parse(localStorage.getItem("#9AM"));
     nineAm.val(init9);
   
   
-    var init10 = JSON.parse(localStorage.getItem("#10am"))
+    var init10 = JSON.parse(localStorage.getItem("#10AM"))
     tenAm.val(init10);
    
-    var init11 = JSON.parse(localStorage.getItem("#11am"))
+    var init11 = JSON.parse(localStorage.getItem("#11AM"))
     elevenAm.val(init11);
    
-    var init12 = JSON.parse(localStorage.getItem("#12pm"))
+    var init12 = JSON.parse(localStorage.getItem("#12PM"))
     twelvePm.val(init12);
    
-    var init1 = JSON.parse(localStorage.getItem("#1pm"))
+    var init1 = JSON.parse(localStorage.getItem("#1PM"))
     onePm.val(init1);
    
-    var init2 = JSON.parse(localStorage.getItem("#2pm"))
+    var init2 = JSON.parse(localStorage.getItem("#2PM"))
     twoPm.val(init2);
    
-    var init3 = JSON.parse(localStorage.getItem("#3pm"))
+    var init3 = JSON.parse(localStorage.getItem("#3PM"))
     threePm.val(init3);
    
-    var init4 = JSON.parse(localStorage.getItem("#4pm"))
+    var init4 = JSON.parse(localStorage.getItem("#4PM"))
     fourPm.val(init4);
    
-    var init5 = JSON.parse(localStorage.getItem("#5pm"))
+    var init5 = JSON.parse(localStorage.getItem("#5PM"))
     fivePm.val(init5);
   }
   
