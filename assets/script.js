@@ -6,11 +6,11 @@ var nineAm = $("#9am");
 var tenAm = $("#10am");
 var elevenAm = $("#11am");
 var twelvePm = $("#12pm");
-var onePm = $("#1pm");
-var twoPm = $("#2pm");
-var threePm = $("#3pm");
-var fourPm = $("#4pm");
-var fivePm = $("#5pm");
+var onePm = $("#13pm");
+var twoPm = $("#14pm");
+var threePm = $("#15pm");
+var fourPm = $("#16pm");
+var fivePm = $("#17pm");
 var hour = dayjs().hour();
 var hourString = $("#hour").text().split(" ");
 var userInput; 
@@ -72,32 +72,33 @@ $(function () {
 
 
     console.log("Current Hour " + hour);
-    var init9 = JSON.parse(localStorage.getItem("#9AM"));
+    
+    var init9 = JSON.parse(localStorage.getItem("9AM"));
     nineAm.val(init9);
   
   
-    var init10 = JSON.parse(localStorage.getItem("#10AM"))
+    var init10 = JSON.parse(localStorage.getItem("10AM"))
     tenAm.val(init10);
    
-    var init11 = JSON.parse(localStorage.getItem("#11AM"))
+    var init11 = JSON.parse(localStorage.getItem("11AM"))
     elevenAm.val(init11);
    
-    var init12 = JSON.parse(localStorage.getItem("#12PM"))
+    var init12 = JSON.parse(localStorage.getItem("12PM"))
     twelvePm.val(init12);
    
-    var init1 = JSON.parse(localStorage.getItem("#1PM"))
+    var init1 = JSON.parse(localStorage.getItem("1PM"))
     onePm.val(init1);
    
-    var init2 = JSON.parse(localStorage.getItem("#2PM"))
+    var init2 = JSON.parse(localStorage.getItem("2PM"))
     twoPm.val(init2);
    
-    var init3 = JSON.parse(localStorage.getItem("#3PM"))
+    var init3 = JSON.parse(localStorage.getItem("3PM"))
     threePm.val(init3);
    
-    var init4 = JSON.parse(localStorage.getItem("#4PM"))
+    var init4 = JSON.parse(localStorage.getItem("4PM"))
     fourPm.val(init4);
    
-    var init5 = JSON.parse(localStorage.getItem("#5PM"))
+    var init5 = JSON.parse(localStorage.getItem("5PM"))
     fivePm.val(init5);
   }
   
